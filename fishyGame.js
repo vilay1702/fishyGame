@@ -57,37 +57,68 @@ const showScore = () => {
 const getScores = () => {
   if (count1 == 0) {
     for (let i = 0; i < 4; i++) {
-      players[i].score = -25;
-      totalScore[i] -= 25;
-      players[i].input = 0;
+      if (currentRound == 5 || currentRound == 6) {
+        players[i].score = -250;
+        totalScore[i] -= 250;
+        players[i].input = 0;
+      } else {
+        players[i].score = -25;
+        totalScore[i] -= 25;
+        players[i].input = 0;
+      }
     }
   } else if (count1 == 1) {
     for (let i = 0; i < 4; i++) {
       if (players[i].input == 1) {
-        players[i].score = -25;
-        totalScore[i] -= 25;
+        if (currentRound == 5 || currentRound == 6) {
+          players[i].score = -250;
+          totalScore[i] -= 250;
+        } else {
+          players[i].score = -25;
+          totalScore[i] -= 25;
+        }
       } else {
-        players[i].score = 25;
-        totalScore[i] += 25;
+        if (currentRound == 5 || currentRound == 6) {
+          players[i].score = 250;
+          totalScore[i] = 250;
+        } else {
+          players[i].score = 25;
+          totalScore[i] += 25;
+        }
       }
       players[i].input = 0;
     }
   } else if (count1 == 2) {
     for (let i = 0; i < 4; i++) {
       if (players[i].input == 1) {
-        players[i].score = -12.5;
-        totalScore[i] -= 12.5;
+        if (currentRound == 5 || currentRound == 6) {
+          players[i].score = -125;
+          totalScore[i] -= 125;
+        } else {
+          players[i].score = -12.5;
+          totalScore[i] -= 12.5;
+        }
       } else {
-        players[i].score = 50;
-        totalScore[i] += 50;
+        if (currentRound == 5 || currentRound == 6) {
+          players[i].score = 500;
+          totalScore[i] += 500;
+        } else {
+          players[i].score = 50;
+          totalScore[i] += 50;
+        }
       }
       players[i].input = 0;
     }
   } else if (count1 == 3) {
     for (let i = 0; i < 4; i++) {
       if (players[i].input == 2) {
-        players[i].score = 75;
-        totalScore[i] += 75;
+        if (currentRound == 5 || currentRound == 6) {
+          players[i].score = 750;
+          totalScore[i] += 750;
+        } else {
+          players[i].score = 75;
+          totalScore[i] += 75;
+        }
       } else {
         players[i].score = 0;
       }
@@ -95,8 +126,13 @@ const getScores = () => {
     }
   } else if (count1 == 4) {
     for (let i = 0; i < 4; i++) {
-      players[i].score = 25;
-      totalScore[i] += 25;
+      if (currentRound == 5 || currentRound == 6) {
+        players[i].score = 250;
+        totalScore[i] += 250;
+      } else {
+        players[i].score = 25;
+        totalScore[i] += 25;
+      }
       players[i].input = 0;
     }
   }
