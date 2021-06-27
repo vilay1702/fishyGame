@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #daf0f7;
+  color: #ffffff;
+  background-image: url("https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+main {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Intro Banner */
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2em 0em;
+  align-items: center;
+  /* background-image: url("https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+  background-position: center;
+}
+#intro h1 {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #00000036;
+}
+#intro h4 {
+  color: #c7c7c7;
+}
+
+/* Rounds */
+#rounds {
+  background-color: #0000007a;
+  width: 100%;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  text-align: center;
+  box-shadow: inset 2px 2px 10px 2px #aafcf1, inset -3px -3px 15px 3px #000000;
+}
+#rounds #captureFish {
+  display: flex;
+  width: 200px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+#rounds h3 {
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 30px;
+}
+
+#captureFish div {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #4fade4;
+  border-radius: 10px;
+  box-shadow: -2px -2px 5px 0px #5af8fd, 3px 3px 6px 2px #00122c;
+}
+
+/* Scores */
+#scores {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#scores h2 {
+  margin: 20px 0px;
+}
+
+#scores table {
+  box-shadow: -4px -4px 10px 0px #ffffff, 2px 2px 8px 3px #000000;
+  background-color: #11818581;
+  width: 350px;
+  height: 400px;
+}
+
+td,
+th {
+  padding: 5px 10px;
+  /* background-color: #3a3a3a; */
+  /* background: linear-gradient(to right, #3a3a3a, #010101); */
+  box-shadow: inset 2px 2px 5px 0px #000000, inset -1px -1px 5px 0px #ffffff;
+  color: #ffffff;
+}
+
+#result {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#result p {
+  width: 50px;
+  background-color: #0c978c81;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  box-shadow: inset 2px 2px 5px 0px #000000, inset -1px -1px 5px 0px #ffffff;
+}
